@@ -16,12 +16,12 @@ public class main{
         Scanner sc = new Scanner(System.in);
         int a;
         
-        System.out.println("Выберите действие: ");
-        System.out.println("1.Добавить пользователя.");
-        System.out.println("2.Редактировать пользователя.");
-        System.out.println("3.Удалить пользователя.");
-        System.out.println("4.Показать всех пользователей.");
-        System.out.println("5.Выйти из программы.");
+        System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: ");
+        System.out.println("1.Р”РѕР±Р°РІРёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.");
+        System.out.println("2.Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.");
+        System.out.println("3.РЈРґР°Р»РёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.");
+        System.out.println("4.РџРѕРєР°Р·Р°С‚СЊ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.");
+        System.out.println("5.Р’С‹Р№С‚Рё РёР· РїСЂРѕРіСЂР°РјРјС‹.");
     
         while(sc.hasNextInt() == true) {
         	a = sc.nextInt();
