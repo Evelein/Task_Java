@@ -34,7 +34,7 @@ import java.util.Scanner;
 			return str.matches("\\+?([3][7][5])\\d{9}"); 
 		}
 	    
-	    //чтение всего файла
+	    //С‡С‚РµРЅРёРµ РІСЃРµРіРѕ С„Р°Р№Р»Р°
 	    public String read() throws IOException {
 	        file = new RandomAccessFile(path, "r");
 	        String res = "";
@@ -50,7 +50,7 @@ import java.util.Scanner;
 	    }
 
 
-	    // запись в файл (+ запись в конец файла)
+	    // Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р»
 	    public void addInToFile(String st) throws IOException {
 	    	long l;
 	    	
@@ -66,29 +66,29 @@ import java.util.Scanner;
 	    }
 	    
 	    
-	    //добавление информации для записив файл
+	    //РґРѕР±Р°РІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё РґР»СЏ Р·Р°РїРёСЃРёРІ С„Р°Р№Р»
 	    public void addInfo() throws IOException {
 	    	Scanner scan = new Scanner(System.in);
 	    	
 	    	
-    		System.out.print("Введите имя: ");
+    		System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ: ");
     		String text = scan.nextLine();
     		
     		while(isWord(text) == false) {
-    			System.out.println("Неверные данные!!!");
-    			System.out.print("Введите имя: ");
+    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+    			System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ: ");
     			text = scan.nextLine();
     		}
 			
 			addInToFile(text + " ");
 
 			
-    		System.out.print("Введите фамилию: ");
+    		System.out.print("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
     		String text1 = scan.nextLine();
     		
     		while(isWord(text1) == false) {
-    			System.out.println("Неверные данные!!!");
-    			System.out.print("Введите фамилию: ");
+    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+    			System.out.print("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
     			text1 = scan.nextLine();
     		}
     		
@@ -97,20 +97,20 @@ import java.util.Scanner;
     		
     		for(int r = 0; r < 3; r++) {
     			
-    			System.out.print("Введите роль: ");
+    			System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
     			String text2 = scan.nextLine();
 
     			if(r == 0) {
         				while(isWord(text2) == false) {
-	    	           		System.out.println("Неверные данные!!!");
-	    	           		System.out.print("Введите роль: ");
+	    	           		System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+	    	           		System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
 	    	           		text2 = scan.nextLine();
     				}
     			}
     			
     			while(text2.equals("") == false & isWord(text2) == false) {
-    				System.out.println("Неверные данные!!!");
-	           		System.out.print("Введите роль: ");
+    				System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+	           		System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
 	           		text2 = scan.nextLine();
     			}
 				
@@ -119,20 +119,20 @@ import java.util.Scanner;
 				
 
     		for(int t = 0; t < 3; t++) {
-    			System.out.print("Введите номер телефона: ");
+    			System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
     			String text3 = scan.nextLine();
     			
     			if(t == 0) {
     				while(isPhone(text3) == false) {
-    	           		System.out.println("Номер телефона должен быть в формате +375 (XX) XXXXXXX!!!");
-    	           		System.out.print("Введите номер телефона: ");
+    	           		System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ +375 (XX) XXXXXXX!!!");
+    	           		System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
     	           		text3 = scan.nextLine();
 					}	
     					
     			}else {
     				while(text3.equals("") == false & isPhone(text3) == false) {
-    					System.out.println("Номер телефона должен быть в формате +375 (XX) XXXXXXX!!!");
-    	           		System.out.print("Введите номер телефона: ");
+    					System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ +375 (XX) XXXXXXX!!!");
+    	           		System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
     	           		text3 = scan.nextLine();
     				}	
     			}
@@ -141,11 +141,11 @@ import java.util.Scanner;
     		}
     		
     		
-    		System.out.print("Введите Email: ");
+    		System.out.print("Р’РІРµРґРёС‚Рµ Email: ");
     		String text4 = scan.nextLine();
     		while(isEmail(text4) == false) {
-    			System.out.println("Неверные данные, Email, должен быть в формате xxxx@xxxx.xx");
-    			System.out.print("Введите Email: ");
+    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ, Email, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ xxxx@xxxx.xx");
+    			System.out.print("Р’РІРµРґРёС‚Рµ Email: ");
     			text4 = scan.nextLine();
     		}
     		
@@ -153,7 +153,7 @@ import java.util.Scanner;
 	    }	
 	    
 		
-		//удаление строки из файла
+		//СѓРґР°Р»РµРЅРёРµ СЃС‚СЂРѕРєРё РёР· С„Р°Р№Р»Р°
 	    public void delete() throws IOException {
 	    	
 	    	File sourceFile = new File("testfile.txt");
@@ -164,7 +164,7 @@ import java.util.Scanner;
 	    	BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
 	    	
 	    	Scanner scn = new Scanner(System.in);
-	    	System.out.println("Введите номер строки, которую хотите удалить: ");
+	    	System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ: ");
 	    	Long lineToDelete = scn.nextLong();
 	    	
 	    	for (int i = 1; (line = reader.readLine()) != null; i++) {
@@ -181,7 +181,7 @@ import java.util.Scanner;
 	  }
 	    
 	    
-	  //редактирование строки в файле
+	  //СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё РІ С„Р°Р№Р»Рµ
 	  public void edit() throws IOException{
 	      	
 		  File sourceFile = new File("testfile.txt");
@@ -192,7 +192,7 @@ import java.util.Scanner;
 		  BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
 	    	
 		  Scanner sc = new Scanner(System.in);
-		  System.out.println("Введите номер строки, которую хотите редактировать: ");
+		  System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ: ");
 		  int lineToEdit = sc.nextInt();
 	    	
 		  for (int i = 1; (line = reader.readLine()) != null; i++) {
@@ -202,24 +202,24 @@ import java.util.Scanner;
 	    	}else {
 	    		Scanner scan = new Scanner(System.in);
 	    		
-	    		System.out.print("Введите имя: ");
+	    		System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ: ");
 	    		String text = scan.nextLine();
 	    		
 	    		while(isWord(text) == false | text.equals("")) {
-	    			System.out.println("Неверные данные!!!");
-	    			System.out.print("Введите имя: ");
+	    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+	    			System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ: ");
 	    			text = scan.nextLine();
 	    		}
 				
 	    		writer.write(text + " ");
 
 				
-	    		System.out.print("Введите фамилию: ");
+	    		System.out.print("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
 	    		String text1 = scan.nextLine();
 	    		
 	    		while(isWord(text1) == false | text1.equals("")) {
-	    			System.out.println("Неверные данные!!!");
-	    			System.out.print("Введите фамилию: ");
+	    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+	    			System.out.print("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
 	    			text1 = scan.nextLine();
 	    		}
 	    		
@@ -228,19 +228,19 @@ import java.util.Scanner;
 	    		
 	    		for(int r = 0; r < 3; r++) {
 	    			
-	    			System.out.print("Введите роль: ");
+	    			System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
 	    			String text2 = scan.nextLine();
 
 	    			if(r == 0) {
 	        				while(text2.equals("") | isWord(text2) == false) {
-		    	           		System.out.println("Неверные данные!!!");
-		    	           		System.out.print("Введите роль: ");
+		    	           		System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+		    	           		System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
 		    	           		text2 = scan.nextLine();
 	    				}
 	    			}
 					while(text2.equals("") == false & isWord(text2) == false) {
-		           		System.out.println("Неверные данные!!!");
-		           		System.out.print("Введите роль: ");
+		           		System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ!!!");
+		           		System.out.print("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ: ");
 		           		text2 = scan.nextLine();
 					}
 					
@@ -249,20 +249,20 @@ import java.util.Scanner;
 					
 
 	    		for(int t = 0; t < 3; t++) {
-	    			System.out.print("Введите номер телефона: ");
+	    			System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
 	    			String text3 = scan.nextLine();
 	    			
 	    			if(t == 0) {
 	    				while(isPhone(text3) == false) {
-	    	           		System.out.println("Номер телефона должен быть в формате +375 (XX) XXXXXXX!!!");
-	    	           		System.out.print("Введите номер телефона: ");
+	    	           		System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ +375 (XX) XXXXXXX!!!");
+	    	           		System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
 	    	           		text3 = scan.nextLine();
 						}	
 	    					
 	    			}else {
 	    				while(text3.equals("") == false & isPhone(text3) == false) {
-	    					System.out.println("Номер телефона должен быть в формате +375 (XX) XXXXXXX!!!");
-	    	           		System.out.print("Введите номер телефона: ");
+	    					System.out.println("РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ +375 (XX) XXXXXXX!!!");
+	    	           		System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
 	    	           		text3 = scan.nextLine();
 	    				}	
 	    			}
@@ -271,11 +271,11 @@ import java.util.Scanner;
 	    		}
 	    		
 	    		
-	    		System.out.print("Введите Email: ");
+	    		System.out.print("Р’РІРµРґРёС‚Рµ Email: ");
 	    		String text4 = scan.nextLine();
 	    		while(isEmail(text4) == false) {
-	    			System.out.println("Неверные данные, Email, должен быть в формате xxxx@xxxx.xx");
-	    			System.out.print("Введите Email: ");
+	    			System.out.println("РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ, Email, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ xxxx@xxxx.xx");
+	    			System.out.print("Р’РІРµРґРёС‚Рµ Email: ");
 	    			text4 =scan.nextLine();
 	    		}
 	    		
